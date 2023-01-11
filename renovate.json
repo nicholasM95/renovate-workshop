@@ -3,5 +3,25 @@
   "extends": [
     "config:base"
   ],
-  "assignees": ["nicholasM95"]
+  "assignees": [
+    "nicholasM95"
+  ],
+  "prConcurrentLimit": 3,
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "automerge": true,
+      "automergeType": "pr-comment"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    }
+  ]
 }
